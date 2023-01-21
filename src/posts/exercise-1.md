@@ -7,4 +7,8 @@ tags:
   - exercise
   - post
 ---
-#﻿ Exercise 1 - Duckiebot Assembly and Basic Development
+## Calibration
+
+### W﻿heels
+
+### C﻿amera
