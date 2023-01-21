@@ -1,8 +1,8 @@
 links:
   - title: About
     url: "#"
-    desc: I am Marcus Huang, in the fourth year of my CS undergrad degree. I had no
-      prior experience with robots, and I am hoping to learn more about this
+    desc: I am Marcus Huang, in the fourth year of my CS undergrad degree.<br> I had
+      no prior experience with robots, and I am hoping to learn more about this
       area in CMPUT 412.
   - title: Repository
     url: https://github.com/marcus65001/cmput412
