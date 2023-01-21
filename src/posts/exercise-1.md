@@ -27,12 +27,8 @@ Following the [instructions](https://docs.duckietown.org/daffy/opmanual_duckiebo
 
 In the first test, the robot drifted to the left:
 
-https://youtube.com/shorts/VjdxAHQwB48
+https://www.youtube.com/watch?v=VjdxAHQwB48
 
 But through repeated testing, I found that the drift pattern is actually random, and it does not appear to be consistently drifting to one side. Upon closer inspection, I suspected that it is because of the lanes are not perfectly flat and the presence of debris. When the wheels hit debris and the gaps between the tiles, the robot will sometimes be driven off the original track, causing the random drifting pattern.
-
-
-
-
 
 #### C﻿amera
