@@ -2,6 +2,7 @@ const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const htmlmin = require("html-minifier");
+const embedYouTube = require("eleventy-plugin-youtube-embed");
 
 module.exports = function (eleventyConfig) {
   // Disable automatic use of your .gitignore
@@ -16,6 +17,9 @@ module.exports = function (eleventyConfig) {
       "dd LLL yyyy"
     );
   });
+  
+  // youtube
+  eleventyConfig.addPlugin(embedYouTube);
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
