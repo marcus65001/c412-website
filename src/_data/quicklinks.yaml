@@ -2,3 +2,6 @@ links:
   - title: Repository
     url: https://github.com/marcus65001/cmput412
     desc: Github repository for the course
+  - title: Exercises
+    url: /blog
+    desc: Written report of exercise solutions
