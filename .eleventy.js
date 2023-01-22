@@ -19,7 +19,11 @@ module.exports = function (eleventyConfig) {
   });
   
   // youtube
-  eleventyConfig.addPlugin(embedYouTube);
+  eleventyConfig.addPlugin(embedYouTube, {
+    // just an example, see default values below:
+    modestBranding: true,
+    recommendSelfOnly: true
+  });
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight);
