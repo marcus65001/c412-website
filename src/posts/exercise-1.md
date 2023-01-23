@@ -29,7 +29,7 @@ In the first test, the robot drifted to the left:
 
 https://www.youtube.com/watch?v=MoCdTmNNuaM
 
-But through repeated testing, I found that the drift pattern is actually random, and it does not appear to be consistently drifting to one side. Upon closer inspection, I think that it is because of the lanes are not perfectly flat and the presence of debris. When the wheels hit debris and the gaps between the tiles, the robot will sometimes be driven off the original track, causing the random drifting pattern.
+But through repeated testing, I found that the drift pattern is actually random, and it does not appear to be consistently drifting to one side. Upon closer inspection, I think that it is because of the lanes are not perfectly flat and the presence of debris. When the wheels hit debris and the gaps between the tiles, the robot will sometimes be driven off the original track, causing a random drifting pattern.
 
 ![](/static/img/calibration_stray_right.jpg "Robot drifting to the right")
 
@@ -136,9 +136,9 @@ Going through the exercises:
 
 We can find MAC addresses and find out about the subnetwork information with the `ifconfig` command.
 
-Sidenote: The notation in the handbook (`192.168.1.xyz`) is not exactly accurate, this is only true when the prefix length is 24, so that the range is 1 to 255. We can see that when the subnet is `192.168.1.0/25`, then the subnet is actually ranging from `192.168.1.1` to `192.168.1.127`. In this sense, sticking with the CIDR notation might be more accurate.
+Sidenote: The notation in the handbook (`192.168.1.xyz`) is not exactly accurate, this is only true when the prefix length is 24 so the range is 1 to 255. We can see that when the subnet is `192.168.1.0/25`, then the subnet is actually ranging from `192.168.1.1` to `192.168.1.127`. In this sense, sticking with the CIDR notation might be more accurate.
 
-With default configuration under Ubuntu, plain hostnames are not resolved (apart from our own machine), we use `hostname.local` to reach local devices.
+With the default configuration under Ubuntu, plain hostnames are not resolved (apart from our own machine), so we use `hostname.local` to reach local devices.
 
 For the SSH part, we can follow the instructions in the cheat sheet for creating SSH key and SSH into the Duckiebot sections.
 
@@ -168,20 +168,20 @@ For B-3.1 Exercise 13, we need to mount our home directory in the container's ho
 
 Resolved by using the full path to the home directory.
 
-The next part is creating a functional Docker container for colour detection:
+The next part is creating a functional Docker container for color detection:
 
-The specification for the colour detector given in the handbook is rather vague: by "most present color", do they mean our detector should output the exact colour values of whatever colour that appears the most by frequency count or within a predefined set of colours we detect whether any of these are present in the section?
+The specification for the color detector given in the handbook is rather vague: by "most present color", do they mean our detector should output the exact color values of whatever colour that appears the most by frequency count or within a predefined set of colours we detect whether any of these are present in the section?
 
-As it is to be implemented for Duckiebots, I assume the latter is more useful in this sense and thus the set of colour selected would naturally be white, red and yellow, which are the colours we used to mark different features on the Duckietown lanes.
+As it is to be implemented for Duckiebots, I assume the latter is more useful in this sense. Thus the set of colors selected would naturally be white, red and yellow, which are the colors we used to mark different features on the Duckietown lanes.
 
-When implementing the colour detection:
+When implementing the color detection:
 
-* The output we got from the camera stream is in the BGR colour space. But it is easier to define colour ranges that can take environment changes (illumination) into account in HSV colour space. So I first convert the frames into HSV.
+* The output we got from the camera stream is in the BGR color space. But it is easier to define colour ranges that can take environment changes (illumination) into account in HSV color space. So I first convert the frames into HSV.
 
   * [OpenCV documentation](https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html) explained this in detail
-* In HSV, the colour red is on two ends of the hue spectrum, so two sets of ranges are needed to properly capture red colour.
+* In HSV, the color red is on two ends of the hue spectrum, so two sets of ranges are needed to capture the red color.
 
-The final colour detection module implemented ([Docker Hub](https://hub.docker.com/r/marcus65001/colordetector), [Github](https://github.com/marcus65001/duckie_color_det)) would take camera stream and the n_split environment parameter as input and output a table of most present colour of interest detected in the divided n horizontal areas:
+The final color detection module implemented ([Docker Hub](https://hub.docker.com/r/marcus65001/colordetector), [Github](https://github.com/marcus65001/duckie_color_det)) would take the camera stream and the n_split environment parameter as input and output a table of the most present color of interest detected in the divided n horizontal areas:
 
 ![](/static/img/color_det.png "Example output on test image")
 
@@ -220,4 +220,4 @@ To resolve this, I attempted:
 
 None of the attempts resolves the issue.
 
-Though probably out of the scope of this specific part of exercise, I think it is possible to resolve the issue by getting the camera output from the topics published by `camera_node`.
+Though probably out of the scope of this specific part of the exercise, I think it is possible to resolve the issue by getting the camera output from the topics published by `camera_node`.
