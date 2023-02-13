@@ -10,7 +10,7 @@ tags:
 
 # Part 1
 
-For the first part of the exercise, we mainly went through the tutorial and exercises in the duckietown handbook[^1].
+For the first part of the exercise, we mainly went through the tutorial and exercises in the duckietown handbook[\[1\]](#r1).
 
 ## Unit C-2.1 to C-2.6
 ### C-2.2, 2.3
@@ -305,7 +305,7 @@ Rosbag file:
 [task.bag](https://github.com/marcus65001/cmput412/raw/main/exercise2/task.bag)
 
 # Reference
-[^1]: [Hands-on Robotics Development using Duckietown](https://docs.duckietown.org/daffy/duckietown-robotics-development/out/dt_infrastructure.html)
+<a name="r1">\[1\]</a> [Hands-on Robotics Development using Duckietown](https://docs.duckietown.org/daffy/duckietown-robotics-development/out/dt_infrastructure.html)
 
 <a name="r2">\[2\]</a> [Names - ROS Wiki](http://wiki.ros.org/Names)
 
