@@ -10,18 +10,20 @@ tags:
 
 # Part 1
 
-For the first part of the exercise, we mainly went through the tutorial and exercises in the duckietown handbook[\[1\]](#r1).
+For the first part of the exercise, we mainly went through the tutorial and exercises in the duckietown handbook [\[1\]](#r1).
 
 ## Unit C-2.1 to C-2.6
 ### C-2.2, 2.3
 by using the provided template, we created our first publisher node. The next section is just changing the content to include the `VEHICLE_NAME`.
 
 ![](/static/img/e2_c23.png "Output from the publisher node")
+<center>Output from the publisher node</center>
 
 ### C-2.4
 We again create a subscriber node with the given code template that subscribes to our publisher node. We can visualize the relation with the `rqt_graph` command:
 
 ![](/static/img/e2_c24.svg "Graph generated with rqt_graph command")
+<center>Graph generated with rqt_graph command</center>
 
 ### C-2.5
 As we are adding more and more nodes, it is increasingly hard to handle everything in the `launch.sh` script. So this section introduces us to the `roslaunch` tool.
@@ -34,18 +36,21 @@ One important thing when using a launch file is to understand namespaces and rem
 Following the instruction, we add a group namespace in the launch file and run `rqt_graph` again to see the change:
 
 ![](/static/img/e2_ns.svg "Graph after namespace change")
+<center>Graph after namespace change</center>
 
 We see that the two nodes are now under the `/VEHICLE_NAME` namespace.
 
 Then, we edit the launch file to have 2 subscribers and 2 publishers:
 
 ![](/static/img/e2_multi.svg "rqt_graph after the change")
+<center>rqt_graph after the change</center>
 
 We see all the communication happening on the same topic, so we can't tell which node is the message from (or to).
 
 To address that, we add a tilde sign before the topic name in the nodes. So that the node's name would be converted into a namespace, and the communication from each different node can take place in their own channel.
 
 ![](/static/img/e2_multi_chatter.svg "rqt_graph after the above change")
+<center>rqt_graph after the above change</center>
 
 But we see that the nodes are not communicating because the subscriber nodes are also expecting the topics under their own namespaces.
 
@@ -57,6 +62,7 @@ Under the subscriber nodes, we add:
 ```
 
 ![](/static/img/e2_multi_remap.svg "rqt_graph after the above change")
+<center>rqt_graph after the above change</center>
 
 We see that the 2 pairs of nodes are communicating as intended now.
 
@@ -89,6 +95,7 @@ It works. Since the remap is under the `<group>` section and `my_subscriber_node
 Though I didn't find anything directly explaining this (in ROS documentation [\[2\]](#r2)), and the `rqt_graph` didn't provide any extra information:
 
 ![](/static/img/e2_multi_rm4.svg "rqt_graph after the above change")
+<center>rqt_graph after the above change</center>
 
 But I speculate that the `<group>` label isn't actually a node, therefore the tilde sign would not be able to convert the node's name into a namespace.
 
@@ -105,12 +112,16 @@ self.image = self._bridge.compressed_imgmsg_to_cv2(data)
 With the image transformed into a CV2 image, we can now print out its size (640\*480\*3=921600):
 
 ![](/static/img/e2_multi_rm4.svg "my_camera_node is printing out the image size")
+<center>my_camera_node is printing out the image size</center>
+
 
 For the modification to the image, here I flipped it vertically.
 
 ![](/static/img/e2_cam_ori.png "image from original camera topic")
+<center>Image from original camera topic</center>
 
-![](/static/img/e2_cam_mod.png "modified image from my_camera_node")
+![](/static/img/e2_cam_mod.png "Modified image from my_camera_node")
+<center>Modified image from my_camera_node</center>
 
 The code for the customized camera node can't fit in a single screenshot, please refer to the [repository](https://github.com/marcus65001/412e2/blob/v2/packages/my_package/src/my_camera_node.py).
 
@@ -135,7 +146,7 @@ When using a rosbag:
 * On Duckiebots, since we are using dockers to run our code, the non-persistent data would be discarded when the container stops. Which means it would be very hard to obtain the bag files. So make sure to save the bags in persistent storage (like `/data`).
 
 ![](/static/img/e2_bag.png "bag messages")
-
+<center>Bag messages</center>
 
 [(Complete code)](https://github.com/marcus65001/412e2/blob/v2/packages/my_package/src/odometry_node.py)
 
@@ -161,6 +172,8 @@ Alternatively, I've also looked into the topic `wheels_driver_node/wheels_cmd`, 
 I'm using 0.41 for the velocity since that's the default value used in the keyboard control (use `rostopic echo /VEHICLE_NAME/kinematics_node/velocity` to see what velocity is used).
 
 ![](/static/img/e2_bag.png "Twist2DStamped messages as seen in the kinematics_node/velocity topic")
+<center>Twist2DStamped messages as seen in the kinematics_node/velocity topic</center>
+
 
 Increasing the velocity makes the wheels move faster but also worsens the slippage problem. Also, it is capped by a `v_max` parameter, in the `kinematics_node` the velocity will be trimmed so that when it is over `v_max` increasing it would not have any effect.
 
