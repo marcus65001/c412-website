@@ -108,9 +108,9 @@ With the image transformed into a CV2 image, we can now print out its size (640\
 
 For the modification to the image, here I flipped it vertically.
 
-![](/static/img/e2_cam_ori.svg "image from original camera topic")
+![](/static/img/e2_cam_ori.png "image from original camera topic")
 
-![](/static/img/e2_cam_mod.svg "modified image from my_camera_node")
+![](/static/img/e2_cam_mod.png "modified image from my_camera_node")
 
 The code for the customized camera node can't fit in a single screenshot, please refer to the [repository](https://github.com/marcus65001/412e2/blob/v2/packages/my_package/src/my_camera_node.py).
 
