@@ -8,7 +8,7 @@ tags:
   - post
 ---
 
-<a href="https://sites.google.com/ualberta.ca/duckiebotchronicles/the-chapters/chapter-3"></a>
+<a href="https://sites.google.com/ualberta.ca/duckiebotchronicles/the-chapters/chapter-3">View it on duckiebotchronicles</a>
 
 <object data="/static/lab3.pdf" type="application/pdf" width="100%" height="100%">
 <p>This browser does not support embedded PDFs. Please download the PDF to view it: 
