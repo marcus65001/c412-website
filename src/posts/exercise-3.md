@@ -10,9 +10,9 @@ tags:
 
 <a href="https://sites.google.com/ualberta.ca/duckiebotchronicles/the-chapters/chapter-3">View it on duckiebotchronicles</a>
 
-<object data="/static/lab3.pdf" type="application/pdf" width="750px" height="750px">
-    <embed src="/static/lab3.pdf" type="application/pdf">
+<object data="/static/file/lab3.pdf" type="application/pdf" width="750px" height="750px">
+    <embed src="/static/file/lab3.pdf" type="application/pdf">
       <p>This browser does not support embedded PDFs. Please download the PDF to view it: 
-      <a href="/static/lab3.pdf">Download PDF</a>.</p>
+      <a href="/static/file/lab3.pdf">Download PDF</a>.</p>
     </embed>
 </object>
