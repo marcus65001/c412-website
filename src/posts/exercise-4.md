@@ -2,7 +2,7 @@
 title: Exercise 4 - Don’t Crash! Tailing Behaviour
 description: Exercise 4 - Don’t Crash! Tailing Behaviour
 author: Johnathon Gil
-date: 2023-03-05T19:50:49.711Z
+date: 2023-03-14T19:50:49.711Z
 tags:
   - exercise
   - post
