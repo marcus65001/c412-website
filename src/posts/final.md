@@ -9,7 +9,9 @@ tags:
 ---
 <iframe src="https://drive.google.com/file/d/1ERmPL-ReiOaXmYZEyV95nTEubx01ExnM/preview" width="640" height="480" allow="autoplay"></iframe>
 
-<a href="https://sites.google.com/ualberta.ca/duckiebotchronicles/the-chapters/final-chapter-project">View it on duckiebotchronicles</a>
+[Project Repository](https://github.com/marcus65001/c412_final)
+
+<a href="https://sites.google.com/ualberta.ca/duckiebotchronicles/the-chapters/final-chapter-project">View the report on duckiebotchronicles</a>
 
 <object data="/static/file/final.pdf" type="application/pdf" width="750px" height="750px">
     <embed src="/static/file/final.pdf" type="application/pdf">
