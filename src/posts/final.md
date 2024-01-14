@@ -1,12 +1,13 @@
 ---
 title: Final Project
 description: Final Project
-author: Johnathon Gil
+author: Johnathon Gil and Marcus Huang
 date: 2023-04-15T19:50:49.711Z
 tags:
   - exercise
   - post
 ---
+<iframe src="https://drive.google.com/file/d/1ERmPL-ReiOaXmYZEyV95nTEubx01ExnM/preview" width="640" height="480" allow="autoplay"></iframe><iframe src="https://drive.google.com/file/d/1ERmPL-ReiOaXmYZEyV95nTEubx01ExnM/preview" width="640" height="480" allow="autoplay"></iframe>
 
 <a href="https://sites.google.com/ualberta.ca/duckiebotchronicles/the-chapters/final-chapter-project">View it on duckiebotchronicles</a>
 
